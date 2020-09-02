@@ -31,3 +31,9 @@ del删除的是变量，不是内存对应数据，它和C语言的free和C++的
 with open('test.txt','r') as item:
   for line in item:
     print(line)
+使用with不管是否异常，在执行完后都会隐式调用相对应的__exit__接口,这里打开文件对应的接口为close()
+6.lambda
+p=lambda x,y,z:(x+y)*z
+print(p(1,2,3)) #结果为（1+2）*3=9
+lambda是匿名函数，指的是一类无需定义函数名的函数或者子程序
+lambda函数不能包含命令,但可以包括函数; 包含的表达式不能有多个
